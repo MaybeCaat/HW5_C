@@ -8,13 +8,13 @@ struct Person
 };
 
 // функция, считающая средний возраст в массиве из структур типа Person
-float averageAge(struct Person arr[], int n) {
+float averageAge(struct Person persons[], int n) {
     // создаём переменную sumAges, где будет храниться сумма всех возрастов из массива
     // изначально равна 0 (ещё не начали читать массив)
     float sumAges = 0;
 
     // создаём указатель ptr на массив
-    struct Person *ptr = arr;
+    struct Person *ptr = persons;
     // перебираем с помощью указателя все структуры в массиве
     for (int i=0; i<n; ptr++, i++) {
         // добавляем возраст из текущей структуры к sumAges
